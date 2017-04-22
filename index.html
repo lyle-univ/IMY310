@@ -148,7 +148,8 @@
     <script>
       var $$ = Dom7;
       var myApp = new Framework7({
-        animateNavBackIcon: true
+        animateNavBackIcon: true,
+        modalTitle: 'Access Denied'
       });
       var mainView = myApp.addView('.view-main', {
         dynamicNavbar: true
@@ -162,21 +163,6 @@
         valueMaxLength: 2,
         dotButton: false
       });
-      var calculator = myApp.keypad({
-        input: '#demo-calculator',
-        type: 'calculator',
-        toolbar: false
-      });
-
-      // Inline calculator
-      myApp.onPageInit('calculator', function (page) {
-        var calculatorInline = myApp.keypad({
-          input: '#demo-calculator-inline',
-          container: '#calculator-inline-container',
-          toolbar: false,
-          type: 'calculator'
-        });
-      });
 
       // Passcode
       myApp.onPageInit('passcode', function (page) {
@@ -184,18 +170,20 @@
           input: '#demo-numpad-inline',
           container: '#numpad-inline-container',
           toolbar: false,
-          valueMaxLength: 4,
+          valueMaxLength: 6,
           dotButton: false,
           formatValue: function(p, value) {
             value = value.toString();
-            return ('****').substring(0, value.length) + ('____').substring(0, 4 - value.length);
+            return ('******').substring(0, value.length) + ('______').substring(0, 6 - value.length);
           },
           onChange: function (p, value) {
             value = value.toString();
-            if (value.length === 4) {
-              myApp.alert('Thank you! Your passcode is<br><b>' + value + '</b>', function () {
-                //mainView.router.back();
+            if (value.length === 6) {
+              if(value=="794613")
                 window.location.href = "contact1_messages.html"
+              else
+                myApp.alert('Passcode is invalid', function () {
+                mainView.router.back();
               });
             }
           }
