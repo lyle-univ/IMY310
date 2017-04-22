@@ -91,20 +91,22 @@
         <div class="pages navbar-fixed toolbar-fixed">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
-
             <div class="navbar">
-                <div class="right">
-                  <a href="#" class="link icon-only">
-                    <i class="f7-icons size-15 link">search_strong</i>
-                  </a>
-                  <a href="#" class="link icon-only">
-                    <i class="f7-icons size-15 link">phone_fill</i>
-                  </a>
-                </div>
+              <div class="right">
+                <a href="#" class="link icon-only">
+                  <i class="f7-icons size-15 link">search_strong</i>
+                </a>
+                <a href="call_log.html" class="link icon-only">
+                  <i class="f7-icons size-15 link">phone_fill</i>
+                </a>
+              </div>
             </div>
+
             <!-- Scrollable page content -->
             <div class="page-content">
               <div class="list-block media-list no-hairlines-between no-hairlines">
+
+
                 <ul class="unread">
                   <li class="swipeout">
                     <div class="swipeout-content">
@@ -123,9 +125,30 @@
                       </div>
                       </a>
                     </div>
-                    <div class="swipeout-actions-left">
-                      <a href="#" class="swipeout-overswipe bg-green reply">Reply</a>
-                      <a href="#" class="bg-blue forward">Forward</a>
+                    <div class="swipeout-actions-right">
+                      <a href="#" class="swipeout-delete"
+                      data-confirm="Are you sure want to delete this item?" data-confirm-title="Delete?">Delete</a>
+                    </div>
+                  </li>
+                </ul>
+
+                <ul>
+                  <li class="swipeout">
+                    <div class="swipeout-content">
+                    <a href="contact2_messages.html" class="item-content item-link external">
+                    <div class="item-media">
+                      <div class="chip">
+                        <div class="chip-media bg-orange">J</div>
+                      </div>
+                    </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">John Parish</div>
+                          <div class="item-after">1 day ago</div>
+                        </div>
+                        <div class="item-text">Haha, yea it's going to be ...</div>
+                      </div>
+                      </a>
                     </div>
                     <div class="swipeout-actions-right">
                       <a href="#" class="swipeout-delete"
@@ -133,6 +156,32 @@
                     </div>
                   </li>
                 </ul>
+
+                <ul class="unread">
+                  <li class="swipeout">
+                    <div class="swipeout-content">
+                    <a href="contact2_messages.html" class="item-content item-link external">
+                    <div class="item-media">
+                      <div class="chip">
+                        <div class="chip-media bg-lightgreen">J</div>
+                      </div>
+                    </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">Lauren White</div>
+                          <div class="item-after">3 days ago</div>
+                        </div>
+                        <div class="item-text">Hi, what is the progress on ...</div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="swipeout-actions-right">
+                      <a href="#" class="swipeout-delete"
+                      data-confirm="Are you sure want to delete this item?" data-confirm-title="Delete?">Delete</a>
+                    </div>
+                  </li>
+                </ul>
+
               </div>
             </div>
           </div>
